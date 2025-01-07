@@ -1,0 +1,21 @@
+name: new-action
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run linter
+        run: make lint
+
+      - name: Run tests
+        run: make test
+
