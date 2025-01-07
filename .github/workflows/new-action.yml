@@ -14,7 +14,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run linter
-        run: make lint
+        run: |
+          make lint
 
       #- name: Run tests
         #run: make test
